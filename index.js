@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   
       // 🚨 Generate certificate content dynamically
-      certificateContent. = `
+      certificateContent.innerHTML = `
       <h2>Certificate of Achievement</h2>
-      text.innerHTML = "This is to certify that"
+      <p>This is to certify that</p>
       <h3>${studentName}</h3>
-      text.innerHTML = "has almost completed the"
-      <h3>${courseName}</h3>
-      text.innerHTML = "with legendary perserverance and world-class bad-assery for never giving up 🏆"
-      <img src= "logo.png">
+      <p>has almost completed the</p> 
+      <h3>${courseName} Course</h3>
+      <p>with legendary perserverance and world-class bad-assery for never giving up🏆</p>
+      <img src="./logo.png" alt="CodeSpace logo" style="margin-top: 20px; max-height:100px;">
       <p>${personalMessage}</p>
     `;
     
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     //  🚨 Close the modal when the close button is clicked
-    closeModal.('', function () {
-      
+    closeModal.addEventListener('click', function () {
+      modal.style.display = 'none';
     });
   });
   
